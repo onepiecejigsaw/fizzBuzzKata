@@ -1,5 +1,5 @@
-class FizzBuzz {
-    static convertSingleInteger(integerToConvert) {
+var FizzBuzz = {
+    convertSingleInteger: function(integerToConvert) {
         if(this.shouldBeConvertedToFizz(integerToConvert) && this.shouldBeConvertedToBuzz(integerToConvert))
             return "FizzBuzz";
         if(this.shouldBeConvertedToFizz(integerToConvert))
@@ -7,18 +7,17 @@ class FizzBuzz {
         if(this.shouldBeConvertedToBuzz(integerToConvert))
             return "Buzz";
         return integerToConvert;
-    }
+    },
 
-    static shouldBeConvertedToFizz(integerToConvert) {
+    shouldBeConvertedToFizz: function(integerToConvert) {
         return (integerToConvert%3 === 0 || integerToConvert.toString().indexOf("3") > -1);
-    }
+    },
 
-    static shouldBeConvertedToBuzz(integerToConvert) {
+    shouldBeConvertedToBuzz: function(integerToConvert) {
         return (integerToConvert%5 === 0 || integerToConvert.toString().indexOf("5") > -1);
-    }
+    },
 
-
-    static convertRangeOfIntegers(upperLimit) {
+    convertRangeOfIntegers: function(upperLimit) {
         for(var i = 1; i <= upperLimit; i++) {
             console.log(this.convertSingleInteger(i));
         }
