@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "fast-check": "^1.22.2",
     "jasmine": "^2.8.0"
   },
   "scripts": {
