@@ -27,4 +27,4 @@ var FizzBuzz = {
 
 module.exports = FizzBuzz;
 
-//FizzBuzz.convertRangeOfIntegers(100);
+FizzBuzz.convertRangeOfIntegers(100);
