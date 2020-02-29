@@ -1,20 +1,9 @@
 var FizzBuzz = {
     convertSingleInteger: function (integerToConvert) {
-        if (this.shouldBeConvertedToFizz(integerToConvert) && this.shouldBeConvertedToBuzz(integerToConvert))
-            return "FizzBuzz";
-        if (this.shouldBeConvertedToFizz(integerToConvert))
-            return "Fizz";
-        if (this.shouldBeConvertedToBuzz(integerToConvert))
-            return "Buzz";
-        return integerToConvert;
-    },
-
-    shouldBeConvertedToFizz: function (integerToConvert) {
-        return (integerToConvert % 3 === 0 || integerToConvert.toString().indexOf("3") > -1);
-    },
-
-    shouldBeConvertedToBuzz: function (integerToConvert) {
-        return (integerToConvert % 5 === 0 || integerToConvert.toString().indexOf("5") > -1);
+        let result = "";
+        if (integerToConvert % 3 === 0 || integerToConvert.toString().indexOf("3") > -1) result += "Fizz";
+        if (integerToConvert % 5 === 0 || integerToConvert.toString().indexOf("5") > -1) result += "Buzz";
+        return result.length === 0 ? integerToConvert : result;
     },
 
     convertRangeOfIntegers: function (upperLimit) {
